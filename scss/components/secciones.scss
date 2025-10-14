@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+
+.titulo-principal {
+  font-family: vars.$font-titulo;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+  }
+}
+
+.subtitulo-principal {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6c757d;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-family: vars.$font-titulo;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.seccion-catalogos {
+  background-color: vars.$color-fondo;
+  padding: 3rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.titulo-seccion-catalogos {
+  font-family: vars.$font-titulo;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #222;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #000;
+  }
+}

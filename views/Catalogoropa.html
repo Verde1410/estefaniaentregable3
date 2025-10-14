@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Catalogo</title>
+</head>
+<body>
+    <style>
+        .card-img-top {
+            height: 250px;          /* Alto fijo para todas las imágenes */
+            object-fit: cover;      /* Recorta la imagen sin deformarla */
+        }
+    </style>
+    <div class="container-fluid header">
+    <div class="row align-items-start">
+        <!-- Buscador -->
+        <div class="col-3 col-md-3 d-flex justify-content-start mb-2 mb-md-0">
+            <form class="d-flex w-100">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success btn-search" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Titulo -->
+        <div class="col-6 col-md-6 text-center mb-2 mb-md-0">
+            <h1 class="titulo1 text-center">Estefania Indumentaria y Moda</h1>
+            <p class="texto-cursiva">Moda y tendencias para todos los estilos.</p>
+        </div>
+
+        <!-- Iconos -->
+        <div class="col-3 col-md-3 text-end d-flex justify-content-end">
+            <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="btn-user">
+                <i class="bi bi-person-circle"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<div class="container-fluid navbar-container navegar">
+    <ul class="navbar-items mx-auto">
+        <li class="nav-item mx-2"><a class="nav-link" href="/index.html">Inicio</a></li>
+        <li class="nav-item mx-2 dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="tiendaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tienda
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
+                <li><a class="dropdown-item" href="/views/Catalogoropa.html">Indumentaria</a></li>
+                <li><a class="dropdown-item" href="/views/Catalogoropa.html">Calzado</a></li>
+                <li><a class="dropdown-item" href="/views/Catalogoropa.html">Perfumes</a></li>
+            </ul>
+        </li>
+        <li class="nav-item mx-2"><a class="nav-link" href="#">Quiénes somos</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="#">Contacto</a></li>
+    </ul>
+</div>
+<div class="container py-5">
+    <div class="row justify-content-center g-4">
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/imagenes/sesion-de-ropa-de-sueter-negro-con-espacio-de-diseno.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Buzo</h5>
+                    <p class="precio-card">$14.200</p>
+                    <p class="card-text">buzo negro liso de algodon</p>
+                    <a href="#" class="btn btn-primary">Lo quiero</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/imagenes/zip0_3fnm_210608.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Campera</h5>
+                    <p class="precio-card">$14.200</p>
+                    <p class="card-text">Campera con dibujo de panda ¡Muy lindo!</p>
+                    <a href="#" class="btn btn-primary">Lo quiero</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/imagenes/sesion-de-estudio-de-ropa-de-moda-masculina-camisa-blanca-basica.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Camisa</h5>
+                    <p class="precio-card">$10.500</p>
+                    <p class="card-text">camisa blanca de vistir hecha de lino</p>
+                    <a href="#" class="btn btn-primary">Lo quiero</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center g-4 mt-4">
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/imagenes/hombre-vestido-con-pantalones-marrones-de-cerca.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pantalón</h5>
+                    <p class="precio-card">$12.500</p>
+                    <p class="card-text">pantalon</p>
+                    <a href="#" class="btn btn-primary">Lo quiero</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/imagenes/9834242.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Remera</h5>
+                    <p class="precio-card">$7.800</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Lo quiero</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="/assets/imagenes/retrato-de-joven-hermosa-nina-sonriente-en-vestido-rosa-claro-de-moda-verano-mujer-sexy-despreocupada-posando-modelo-positivo-divirtiendose.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Vestido</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Lo quiero</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.titulo1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #1d1515;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+@media (max-width: 992px) {
+  .titulo1 {
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .titulo1 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.texto-cursiva {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #555;
+}
+
+/*# sourceMappingURL=tipografia.css.map */

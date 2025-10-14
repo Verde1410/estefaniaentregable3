@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+
+.btn-catalogo {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  background-color: vars.$color-primario;
+  color: #fff;
+  font-family: vars.$font-card;
+  font-weight: 500;
+  border-radius: 50px;
+  text-decoration: none;
+  @include mixins.transition(all);
+
+  &:hover {
+    background-color: darken(vars.$color-primario, 15%);
+    transform: translateY(-3px);
+  }
+}

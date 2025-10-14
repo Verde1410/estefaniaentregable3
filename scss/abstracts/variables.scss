@@ -1,0 +1,34 @@
+// scss/abstracts/_variables.scss
+
+// ===== Colores =====
+$color-fondo: #f8f9fa;                // fondo general
+$color-texto: #333;                    // texto principal
+$color-texto-secundario: #555;        // textos cursivos o secundarios
+$color-primario: #007bff;             // botones, links principales
+$color-secundario: #0056b3;           // hover de botones y links
+$color-header-bg: #fff;                // fondo del header
+$color-header-border: #ddd;            // borde del header
+$color-footer-bg: #111;                // fondo del footer
+$color-footer-text: #f8f9fa;           // texto del footer
+
+
+
+
+// ===== Fuentes =====
+$font-base: 'Roboto', sans-serif;       // texto general
+$font-titulo: 'Playfair Display', serif; // títulos principales
+$font-card: 'Poppins', sans-serif;       // títulos de cards, botones
+
+// ===== Breakpoints =====
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+
+// ===== Bordes y radios =====
+$border-radius: 0.25rem;
+$border-radius-btn: 50px;
+
+// ===== Sombras =====
+$shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+$shadow-navbar: 0 2px 4px rgba(0, 0, 0, 0.1);

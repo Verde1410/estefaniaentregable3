@@ -1,0 +1,50 @@
+.navbar-container {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  margin-top: 120px;
+}
+.navbar-container .navbar-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.navbar-container .navbar-items .nav-item {
+  margin: 0 0.5rem;
+}
+.navbar-container .navbar-items .nav-item .nav-link {
+  color: #333;
+  font-weight: 500;
+}
+.navbar-container .navbar-items .nav-item .nav-link:hover {
+  color: #007bff;
+}
+.navbar-container .navbar-items .nav-item .dropdown-menu {
+  min-width: 150px;
+}
+.navbar-container .navbar-items .nav-item .dropdown-menu .dropdown-item {
+  color: #333;
+}
+.navbar-container .navbar-items .nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .navbar-container .navbar-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbar-container .nav-item {
+    margin-left: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */

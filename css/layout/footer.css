@@ -1,0 +1,20 @@
+.footer {
+  background-color: #111;
+  color: #f8f9fa;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem 1rem;
+}
+.footer .footer-titulo,
+.footer .footer-subtitulo {
+  color: #fff;
+}
+.footer .footer-texto,
+.footer .footer-link {
+  color: #ccc;
+}
+.footer .footer-texto:hover,
+.footer .footer-link:hover {
+  color: #007bff;
+}
+
+/*# sourceMappingURL=footer.css.map */

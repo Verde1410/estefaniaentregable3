@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as vars;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $break-sm) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: $break-md) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: $break-lg) { @content; }
+  }
+}
+
+@mixin transition($props) {
+  transition: $props 0.3s ease;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: vars.$break-sm) { @content; }
+  } 
+  @else if $breakpoint == md {
+    @media (max-width: vars.$break-md) { @content; }
+  } 
+  @else if $breakpoint == lg {
+    @media (max-width: vars.$break-lg) { @content; }
+  }
+}
+
+@mixin transition($props) {
+  transition: $props 0.3s ease;
+}

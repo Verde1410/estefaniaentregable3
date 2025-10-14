@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as vars;
+
+.footer {
+  background-color: vars.$color-footer-bg;
+  color: vars.$color-footer-text;
+  font-family: vars.$font-base;
+  padding: 2rem 1rem;
+
+  .footer-titulo,
+  .footer-subtitulo {
+    color: #fff;
+  }
+
+  .footer-texto,
+  .footer-link {
+    color: #ccc;
+
+    &:hover {
+      color: vars.$color-primario;
+    }
+  }
+}

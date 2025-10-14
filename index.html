@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estefania Indumentaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="container-fluid header">
+    <div class="row align-items-start">
+        
+        <div class="col-3 col-md-3 d-flex justify-content-start mb-2 mb-md-0">
+            <form class="d-flex w-100">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success btn-search" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+        </div>
+
+        
+        <div class="col-6 col-md-6 text-center mb-2 mb-md-0">
+            <h1 class="titulo1 text-center">Estefania Indumentaria y Moda</h1>
+            <p class="texto-cursiva">Moda y tendencias para todos los estilos.</p>
+        </div>
+
+        
+        <div class="col-3 col-md-3 text-end d-flex justify-content-end">
+            <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="/login.html" class="btn-user">
+                <i class="bi bi-person-circle"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid navbar-container navegar">
+    <ul class="navbar-items mx-auto">
+        <li class="nav-item mx-2"><a class="nav-link" href="/index.html">Inicio</a></li>
+        <li class="nav-item mx-2 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Tienda
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
+                <li><a class="dropdown-item" href="/views/Catalogoropa.html">Indumentaria</a></li>
+                <li><a class="dropdown-item" href="/views/Catalogoropa.html">Calzado</a></li>
+                <li><a class="dropdown-item" href="/views/Catalogoropa.html">Perfumes</a></li>
+            </ul>
+        </li>
+        <li class="nav-item mx-2"><a class="nav-link" href="#">Quiénes somos</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="#">Contacto</a></li>
+    </ul>
+</div>
+
+<div class="row align-items-center mb-5">
+  
+  <div class="col-md-4 text-center mb-3 mb-md-0">
+    <h2 class="titulo-principal text-center">Nueva Ropa</h2>
+    <p class="subtitulo-principal text-center">Descubrí las últimas tendencias de la temporada</p>
+  </div>
+
+  
+  <div class="col-md-8">
+    <div id="carouselRopa" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded shadow">
+        <div class="carousel-item active">
+          <a href="catalogoropa.html">
+            <img src="assets/imagenes/9665752.jpg" class="d-block w-100" alt="Ropa 1">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="catalogoropa.html">
+            <img src="assets/imagenes/mujer-eligiendo-una-camisa-blanca.jpg" class="d-block w-100" alt="Ropa 2">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="catalogoropa.html">
+            <img src="assets/imagenes/moda-rapida-vs-moda-lenta-y-sostenible.jpg" class="d-block w-100" alt="Ropa 3">
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselRopa" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselRopa" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <h3 class="titulo-seccion text-center">Productos Destacados</h3>
+  <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <div class="card text-center" style="width: 14rem;">
+            <a href="catalogoropa.html">
+              <img src="assets/imagenes/zip0_3fnm_210608.jpg" class="card-img-top" alt="Producto 1">
+            </a>
+            <div class="card-body">
+              <h6 class="titulo-card">Campera</h6>
+              <p class="precio-card">$15.000</p>
+            </div>
+          </div>
+          <div class="card text-center" style="width: 14rem;">
+            <a href="catalogoropa.html">
+              <img src="assets/imagenes/hombre-vestido-con-pantalones-marrones-de-cerca.jpg" class="card-img-top" alt="Producto 2">
+            </a>
+            <div class="card-body">
+              <h6 class="titulo-card">Pantalón</h6>
+              <p class="precio-card">$12.500</p>
+            </div>
+          </div>
+          <div class="card text-center" style="width: 14rem;">
+            <a href="catalogoropa.html">
+              <img src="assets/imagenes/9834242.jpg" class="card-img-top" alt="Producto 3">
+            </a>
+            <div class="card-body">
+              <h6 class="titulo-card">Remera</h6>
+              <p class="precio-card">$7.800</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <div class="card text-center" style="width: 14rem;">
+            <a href="catalogoropa.html">
+              <img src="assets/imagenes/sesion-de-estudio-de-ropa-de-moda-masculina-camisa-blanca-basica.jpg" class="card-img-top" alt="Producto 4">
+            </a>
+            <div class="card-body">
+              <h6 class="titulo-card">Camisa</h6>
+              <p class="precio-card">$10.500</p>
+            </div>
+          </div>
+          <div class="card text-center" style="width: 14rem;">
+            <a href="catalogoropa.html">
+              <img src="assets/imagenes/retrato-de-joven-hermosa-nina-sonriente-en-vestido-rosa-claro-de-moda-verano-mujer-sexy-despreocupada-posando-modelo-positivo-divirtiendose.jpg" class="card-img-top" alt="Producto 5">
+            </a>
+            <div class="card-body">
+              <h6 class="titulo-card">Vestido</h6>
+              <p class="precio-card">$18.000</p>
+            </div>
+          </div>
+          <div class="card text-center" style="width: 14rem;">
+            <a href="catalogoropa.html">
+              <img src="assets/imagenes/sesion-de-ropa-de-sueter-negro-con-espacio-de-diseno.jpg" class="card-img-top" alt="Producto 6">
+            </a>
+            <div class="card-body">
+              <h6 class="titulo-card">Buzo</h6>
+              <p class="precio-card">$14.200</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+
+<div class="row seccion-catalogos text-center my-5">
+  <h3 class="titulo-seccion-catalogos mb-4">Vení a ver nuestros catálogos</h3>
+  <div class="d-flex justify-content-center flex-wrap gap-3">
+    <a href="catalogo-perfumes.html" class="btn-catalogo">Perfumes</a>
+    <a href="catalogo-indumentaria.html" class="btn-catalogo">Indumentaria</a>
+    <a href="catalogo-calzado.html" class="btn-catalogo">Calzado</a>
+  </div>
+</div>
+
+<footer class="footer mt-5 py-4">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      
+     
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h4 class="footer-titulo">Estefania Indumentaria</h4>
+        <p class="footer-texto">
+          Moda y tendencias para todos los estilos.  
+          ¡Descubrí la colección que te representa!
+        </p>
+      </div>
+
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-subtitulo">Enlaces útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Inicio</a></li>
+          <li><a href="#" class="footer-link">Tienda</a></li>
+          <li><a href="#" class="footer-link">Quiénes somos</a></li>
+          <li><a href="#" class="footer-link">Contacto</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="col-md-4">
+        <h5 class="footer-subtitulo">Contacto</h5>
+        <p class="footer-texto mb-1"><i class="bi bi-geo-alt-fill"></i> Córdoba, Argentina</p>
+        <p class="footer-texto mb-1"><i class="bi bi-envelope-fill"></i> contacto@estefania.com</p>
+        <p class="footer-texto"><i class="bi bi-telephone-fill"></i> +54 9 351 123 4567</p>
+      </div>
+    </div>
+
+    
+    <div class="text-center pt-3 mt-4 border-top">
+      <p class="mb-0 small">&copy; 2025 Estefania Indumentaria. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
