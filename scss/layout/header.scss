@@ -1,68 +1,133 @@
 @use '../abstracts/variables' as vars;
 @use '../abstracts/mixins' as mixins;
+/* --- NAVBAR: siempre horizontal, ajustable --- */
 
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 0.5rem 1rem;
-  background-color: vars.$color-header-bg;
-  z-index: 1000;
-  border-bottom: 1px solid vars.$color-header-border;
+.header{
+   background-color: #fff;
+   padding: 0;
+}
+header .navbar-container {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 !important;
+  
+  //padding: 0.25rem 0 !important;
+  border-bottom: 1px solid #ddd;
+}
 
-  .form-control {
-    height: 2rem;
-    font-size: 0.9rem;
+header .navbar-container .navbar-items {
+  display: flex;
+  flex-direction: row;     /* SIEMPRE horizontal */
+  flex-wrap: nowrap;       /* NO permitir bajar a otra línea */
+  white-space: nowrap;     /* NO permitir quiebre de palabras */
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+header .navbar-container .navbar-items li a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Ajustes de espacio y tamaño (solo cambian gap y font-size) */
+@media (max-width: 1200px) {
+  header .navbar-container .navbar-items { gap: 1.2rem; }
+  header .navbar-container .navbar-items li a { font-size: 0.95rem; padding: 0.28rem 0.7rem; }
+}
+
+@media (max-width: 992px) {
+  /* mantener navbar horizontal: solo reducir gap y fuente */
+  header .navbar-container .navbar-items { gap: 1rem; }
+  header .navbar-container .navbar-items li a { font-size: 0.9rem; padding: 0.24rem 0.6rem; }
+  /* asegurate de NO tener flex-direction: column ni width:100% aquí */
+  .separado {
+    margin-top: -25px !important;
   }
+}
 
-  .btn-search {
-    height: 2rem;
-    padding: 0 0.5rem;
+@media (max-width: 768px) {
+  header .navbar-container .navbar-items { gap: 0.8rem; }
+  header .navbar-container .navbar-items li a { font-size: 0.85rem; padding: 0.2rem 0.5rem; }
+}
+
+@media (max-width: 576px) {
+  header .navbar-container .navbar-items { gap: 0.5rem; }
+  header .navbar-container .navbar-items li a { font-size: 0.75rem; padding: 0.18rem 0.45rem; }
+}
+
+/* limpiar márgenes fantasma */
+.header + .navbar-container { margin-top: -1px !important; }
+.navbar-container ul { margin-top: 0 !important; padding-top: 0 !important; }
+
+// espacio para contenido 
+
+@media (max-width: 992px) { header { padding-top: 0px !important; } }
+@media (max-width: 576px) { header { padding-top: 0px !important; } }
+
+
+
+
+@media (max-width: 1440px) {
+
+    .header + .navbar-container {
+      padding: 2px;
+      margin-top: -5px !important;
+    
   }
-
-  .titulo1 {
-    font-family: vars.$font-base;
-    font-weight: bold;
-    color: vars.$color-texto;
-    font-size: 2rem;
-    margin-top: 1rem;
-
-    @include mixins.respond-to(lg) {
-      font-size: 1.5rem;
-      margin-top: 0.8rem;
-    }
-
-    @include mixins.respond-to(sm) {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
+}
+@media (max-width: 1024px) {
+header + .navbar-container {
+  
+    margin-top: -7px !important;
+    
   }
+}
 
-  .texto-cursiva {
-    font-family: vars.$font-base;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1rem;
-    color: vars.$color-texto-secundario;
+@media (max-width: 768px) {
+  body {
+    padding-top: 10px; /* aumenta espacio en mobile */
+      border: none;
+      margin: 0;
+      padding: 0;
   }
-
-  .col-3.text-end a,
-  .col-3.text-end .btn-user {
-    font-size: 1.5rem;
-    color: vars.$color-texto;
-    margin-left: 10px;
-    display: inline-block;
-    padding: 0;
-    border: none;
-    background: none;
-
-    &:hover {
-      color: vars.$color-primario;
-    }
+  .header + .navbar-container {
+  
+    margin-top: -20px !important;
+    
   }
+}
 
-  .btn-user i {
-    font-size: 1.5rem;
+@media (max-width: 576px) {
+  body {
+    padding-top: 0px; /* suficiente para evitar que el contenido quede tapado */
+  }
+  .header + .navbar-container {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 375px) {
+
+  .header + .navbar-container {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 425px) {
+
+  .header + .navbar-container {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 320px) {
+
+  .header + .navbar-container {
+    margin-top: 0 !important;
   }
 }

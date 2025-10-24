@@ -1,26 +1,48 @@
-@use '../abstracts/mixins' as mixins;
 
 .card {
   border: none;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  box-sizing: border-box; // ✅ evita desbordes
+  background-color: #fff;
 
   &:hover {
     transform: translateY(-5px);
   }
 
-  .titulo-card {
+  .card-img-top {
+    width: 100%;
+    height: 220px; // ✅ altura fija para uniformidad
+    object-fit: cover; // ✅ recorta sin deformar
+    object-position: center; // centra el foco
+    display: block; // elimina espacios en blanco
+    border-bottom: 1px solid #eee;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .titulo-card,
+  .card-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1rem;
     color: #111;
+    margin-top: 0.5rem;
   }
 
   .precio-card {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #444;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn {
+    border-radius: 25px;
+    font-weight: 500;
   }
 }

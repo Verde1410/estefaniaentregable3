@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Ropa - Estefania Indumentaria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <style>
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="perfume">
+
+  <header>
+  <!-- HEADER SUPERIOR -->
+  <div class="header d-flex align-items-center justify-content-between flex-wrap px-3">
+    
+    <!-- 🔍 Buscador -->
+    <div class="buscador flex-grow-1 d-flex justify-content-start mb-2 mb-md-0">
+      <form class="d-flex w-100">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- 🏷️ Título -->
+    <div class="titulo-container text-center flex-grow-1 mx-2 my-2 my-md-0">
+      <h1 class="titulo1 mb-0">Estefania Indumentaria y Moda</h1>
+      <p class="texto-cursiva mb-0">Moda y tendencias para todos los estilos.</p>
+    </div>
+
+    <!-- 🌐 Redes -->
+    <div class="redes d-flex align-items-center gap-2 justify-content-end flex-grow-1">
+      <a href="https://www.facebook.com/"><i class="bi bi-facebook fs-5"></i></a>
+      <a href="https://x.com/"><i class="bi bi-twitter fs-5"></i></a>
+      <a href="https://www.instagram.com/"><i class="bi bi-instagram fs-5"></i></a>
+      <a href="https://www.whatsapp.com/"><i class="bi bi-whatsapp fs-5"></i></a>
+      <a href="/login.html"><i class="bi bi-person-circle fs-4"></i></a>
+    </div>
+  </div>
+
+  <!-- NAVBAR INFERIOR -->
+  <nav class="navbar-container separado">
+    <ul class="navbar-items">
+      <li><a class="nav-link" href="../index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" data-bs-toggle="dropdown">Tienda</a>
+        <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
+          <li><a class="dropdown-item" href="../views/Catalogoropa.html">Indumentaria</a></li>
+          <li><a class="dropdown-item" href="../views/catalogocalzado.html">Calzado</a></li>
+          <li><a class="dropdown-item" href="../views/CatalogoPerfumes.html">Perfumes</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="../views/coleciones.html">Coleciones</a></li>
+      <li><a class="nav-link" href="../views/Contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- CATALOGO -->
+<div class="container py-5 " style="margin-top: 60px;"> <!-- margen para que no quede debajo del header y navbar -->
+  <div class="row justify-content-center g-4">
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/imagenes/1226.jpg" class="card-img-top" alt="Buzo">
+        <div class="card-body text-center">
+          <h5 class="card-title">Brand Name</h5>
+          <p class="precio-card">$14.200</p>
+          <p class="card-text">perfume con toques citricos y maderados</p>
+          <a href="#" class="btn btn-primary">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/imagenes/frasco-de-vidrio-de-perfume-femenino-en-polvo-con-textura.jpg" class="card-img-top" alt="Campera">
+        <div class="card-body text-center">
+          <h5 class="card-title">Rose channel</h5>
+          <p class="precio-card">$15.000</p>
+          <p class="card-text">perfume ligero con extractos de rosa</p>
+          <a href="#" class="btn btn-primary">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/imagenes/botella-de-perfumes-en-pared-rosa-con-flores.jpg" class="card-img-top" alt="Camisa">
+        <div class="card-body text-center">
+          <h5 class="card-title">Aqua Boutique</h5>
+          <p class="precio-card">$10.500</p>
+          <p class="card-text">perfume con fragancia a lavanda y toques primaverales</p>
+          <a href="#" class="btn btn-primary">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-4">
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/imagenes/2149163109.jpg" class="card-img-top" alt="Pantalón">
+        <div class="card-body text-center">
+          <h5 class="card-title">Pantalón</h5>
+          <p class="precio-card">$12.500</p>
+          <p class="card-text">Pantalón de algodón</p>
+          <a href="#" class="btn btn-primary">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/imagenes/renderizacion-3d-de-productos-de-cuidado-personal-en-color-rosa-fondante.jpg" class="card-img-top" alt="Remera">
+        <div class="card-body text-center">
+          <h5 class="card-title">Remera</h5>
+          <p class="precio-card">$7.800</p>
+          <p class="card-text">Remera básica de algodón</p>
+          <a href="#" class="btn btn-primary">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../assets/imagenes/158075.jpg" class="card-img-top" alt="Vestido">
+        <div class="card-body text-center">
+          <h5 class="card-title">Vestido</h5>
+          <p class="precio-card">$18.000</p>
+          <p class="card-text">Vestido rosa claro de verano</p>
+          <a href="#" class="btn btn-primary">Lo quiero</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5 py-4">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      
+     
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h4 class="footer-titulo">Estefania Indumentaria</h4>
+        <p class="footer-texto">
+          Moda y tendencias para todos los estilos.  
+          ¡Descubrí la colección que te representa!
+        </p>
+      </div>
+
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="footer-subtitulo">Enlaces útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="../index.html" class="footer-link">Inicio</a></li>
+          <li><a href="../views/Catalogoropa.html" class="footer-link">Tienda</a></li>
+          <li><a href="../views/Contacto.html" class="footer-link">Quiénes somos</a></li>         
+        </ul>
+      </div>
+
+      
+      <div class="col-md-4">
+        <h5 class="footer-subtitulo">Contacto</h5>
+        <p class="footer-texto mb-1"><i class="bi bi-geo-alt-fill"></i> Córdoba, Argentina</p>
+        <p class="footer-texto mb-1"><i class="bi bi-envelope-fill"></i> contacto@estefania.com</p>
+        <p class="footer-texto"><i class="bi bi-telephone-fill"></i> +54 9 351 123 4567</p>
+      </div>
+    </div>
+
+    
+    <div class="text-center pt-3 mt-4 border-top">
+      <p class="mb-0 small">&copy; 2025 Estefania Indumentaria. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

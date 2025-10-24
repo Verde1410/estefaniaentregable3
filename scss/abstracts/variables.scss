@@ -11,14 +11,16 @@ $color-header-border: #ddd;            // borde del header
 $color-footer-bg: #111;                // fondo del footer
 $color-footer-text: #f8f9fa;           // texto del footer
 
-
-
-
+$color-navbar-fondo: #fff;
+$color-fondo: #f5f5f5;
+$color-header-border: #ddd;
 // ===== Fuentes =====
 $font-base: 'Roboto', sans-serif;       // texto general
 $font-titulo: 'Playfair Display', serif; // títulos principales
 $font-card: 'Poppins', sans-serif;       // títulos de cards, botones
 
+$header-height: 90px;
+$navbar-height: 60px;
 // ===== Breakpoints =====
 $break-sm: 576px;
 $break-md: 768px;

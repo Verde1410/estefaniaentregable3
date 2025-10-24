@@ -8,62 +8,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    
 </head>
+
+
+
 <body>
 
-
-<div class="container-fluid header">
-    <div class="row align-items-start">
-        
-        <div class="col-3 col-md-3 d-flex justify-content-start mb-2 mb-md-0">
-            <form class="d-flex w-100">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-outline-success btn-search" type="submit">
-                    <i class="bi bi-search"></i>
-                </button>
-            </form>
-        </div>
-
-        
-        <div class="col-6 col-md-6 text-center mb-2 mb-md-0">
-            <h1 class="titulo1 text-center">Estefania Indumentaria y Moda</h1>
-            <p class="texto-cursiva">Moda y tendencias para todos los estilos.</p>
-        </div>
-
-        
-        <div class="col-3 col-md-3 text-end d-flex justify-content-end">
-            <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/1234567890" target="_blank"><i class="bi bi-whatsapp"></i></a>
-            <a href="/login.html" class="btn-user">
-                <i class="bi bi-person-circle"></i>
-            </a>
-        </div>
+  <header>
+  <!-- HEADER SUPERIOR -->
+  <div class="header d-flex align-items-center justify-content-between flex-wrap px-3">
+    
+    <!-- 🔍 Buscador -->
+    <div class="buscador flex-grow-1 d-flex justify-content-start mb-2 mb-md-0">
+      <form class="d-flex w-100">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
     </div>
-</div>
 
+    <!-- 🏷️ Título -->
+    <div class="titulo-container text-center flex-grow-1 mx-2 my-2 my-md-0">
+      <h1 class="titulo1 mb-0">Estefania Indumentaria y Moda</h1>
+      <p class="texto-cursiva mb-0">Moda y tendencias para todos los estilos.</p>
+    </div>
 
-<div class="container-fluid navbar-container navegar">
-    <ul class="navbar-items mx-auto">
-        <li class="nav-item mx-2"><a class="nav-link" href="index.html">Inicio</a></li>
-        <li class="nav-item mx-2 dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Tienda
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
-                <li><a class="dropdown-item" href="views/Catalogoropa.html">Indumentaria</a></li>
-                <li><a class="dropdown-item" href="views/Catalogoropa.html">Calzado</a></li>
-                <li><a class="dropdown-item" href="views/Catalogoropa.html">Perfumes</a></li>
-            </ul>
-        </li>
-        <li class="nav-item mx-2"><a class="nav-link" href="#">Quiénes somos</a></li>
-        <li class="nav-item mx-2"><a class="nav-link" href="#">Contacto</a></li>
+    <!-- 🌐 Redes -->
+    <div class="redes d-flex align-items-center gap-2 justify-content-end flex-grow-1">
+      <a href="https://www.facebook.com/"><i class="bi bi-facebook fs-5"></i></a>
+      <a href="https://x.com/"><i class="bi bi-twitter fs-5"></i></a>
+      <a href="https://www.instagram.com/"><i class="bi bi-instagram fs-5"></i></a>
+      <a href="https://www.whatsapp.com/"><i class="bi bi-whatsapp fs-5"></i></a>
+      <a href="/login.html"><i class="bi bi-person-circle fs-4"></i></a>
+    </div>
+  </div>
+
+  <!-- NAVBAR INFERIOR -->
+  <nav class="navbar-container separado">
+    <ul class="navbar-items">
+      <li><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" data-bs-toggle="dropdown">Tienda</a>
+        <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
+          <li><a class="dropdown-item" href="views/Catalogoropa.html">Indumentaria</a></li>
+          <li><a class="dropdown-item" href="views/catalogocalzado.html">Calzado</a></li>
+          <li><a class="dropdown-item" href="views/CatalogoPerfumes.html">Perfumes</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="views/coleciones.html">Coleciones</a></li>
+      <li><a class="nav-link" href="views/Contacto.html">Contacto</a></li>
     </ul>
-</div>
+  </nav>
+</header>
 
-<div class="row align-items-center mb-5">
+<div class="row align-items-center mb-5 muestra">
   
   <div class="col-md-4 text-center mb-3 mb-md-0">
     <h2 class="titulo-principal text-center">Nueva Ropa</h2>
@@ -119,7 +119,7 @@
           </div>
           <div class="card text-center" style="width: 14rem;">
             <a href="catalogoropa.html">
-              <img src="assets/imagenes/hombre-vestido-con-pantalones-marrones-de-cerca.jpg" class="card-img-top" alt="Producto 2">
+              <img src="assets/imagenes/pantalon.jpg" class="card-img-top" alt="Producto 2">
             </a>
             <div class="card-body">
               <h6 class="titulo-card">Pantalón</h6>
@@ -151,7 +151,7 @@
           </div>
           <div class="card text-center" style="width: 14rem;">
             <a href="catalogoropa.html">
-              <img src="assets/imagenes/retrato-de-joven-hermosa-nina-sonriente-en-vestido-rosa-claro-de-moda-verano-mujer-sexy-despreocupada-posando-modelo-positivo-divirtiendose.jpg" class="card-img-top" alt="Producto 5">
+              <img src="assets/imagenes/vestido.jpg" class="card-img-top" alt="Producto 5">
             </a>
             <div class="card-body">
               <h6 class="titulo-card">Vestido</h6>
@@ -207,10 +207,9 @@
       <div class="col-md-4 mb-4 mb-md-0">
         <h5 class="footer-subtitulo">Enlaces útiles</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Inicio</a></li>
-          <li><a href="#" class="footer-link">Tienda</a></li>
-          <li><a href="#" class="footer-link">Quiénes somos</a></li>
-          <li><a href="#" class="footer-link">Contacto</a></li>
+          <li><a href="index.html" class="footer-link">Inicio</a></li>
+          <li><a href="views/Catalogoropa.html" class="footer-link">Tienda</a></li>
+          <li><a href="views/Contacto.html" class="footer-link">Quiénes somos</a></li>         
         </ul>
       </div>
 

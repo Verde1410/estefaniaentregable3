@@ -11,3 +11,18 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'components/secciones';
+
+
+
+// Contenido principal: siempre debajo del header + navbar
+.contenido-principal {
+  margin-top: calc(vars.$header-height + vars.$navbar-height);
+  padding: 1rem;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .contenido-principal {
+    margin-top: calc(vars.$header-height + vars.$navbar-height + 20px);
+  }
+}

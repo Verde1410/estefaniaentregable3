@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .titulo1 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -26,55 +27,6 @@
   color: #555;
 }
 
-.navbar-container {
-  position: relative;
-  width: 100%;
-  padding: 0.5rem 0;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
-  margin-top: 120px;
-}
-.navbar-container .navbar-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-.navbar-container .navbar-items .nav-item {
-  margin: 0 0.5rem;
-}
-.navbar-container .navbar-items .nav-item .nav-link {
-  color: #333;
-  font-weight: 500;
-}
-.navbar-container .navbar-items .nav-item .nav-link:hover {
-  color: #007bff;
-}
-.navbar-container .navbar-items .nav-item .dropdown-menu {
-  min-width: 150px;
-}
-.navbar-container .navbar-items .nav-item .dropdown-menu .dropdown-item {
-  color: #333;
-}
-.navbar-container .navbar-items .nav-item .dropdown-menu .dropdown-item:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-@media (max-width: 768px) {
-  .navbar-container .navbar-items {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .navbar-container .nav-item {
-    margin-left: 0 !important;
-  }
-}
-
 .btn-catalogo {
   display: inline-block;
   padding: 0.75rem 1.8rem;
@@ -87,72 +39,150 @@
   transition: all 0.3s ease;
 }
 .btn-catalogo:hover {
-  background-color: rgb(0, 86.1, 178.5);
   transform: translateY(-3px);
 }
 
+/* --- NAVBAR: siempre horizontal, ajustable --- */
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 0.5rem 1rem;
   background-color: #fff;
-  z-index: 1000;
+  padding: 0;
+}
+
+header .navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 !important;
   border-bottom: 1px solid #ddd;
 }
-.header .form-control {
-  height: 2rem;
-  font-size: 0.9rem;
+
+header .navbar-container .navbar-items {
+  display: flex;
+  flex-direction: row; /* SIEMPRE horizontal */
+  flex-wrap: nowrap; /* NO permitir bajar a otra línea */
+  white-space: nowrap; /* NO permitir quiebre de palabras */
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-.header .btn-search {
-  height: 2rem;
-  padding: 0 0.5rem;
-}
-.header .titulo1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+
+header .navbar-container .navbar-items li a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
   color: #333;
-  font-size: 2rem;
-  margin-top: 1rem;
+  text-decoration: none;
+}
+
+/* Ajustes de espacio y tamaño (solo cambian gap y font-size) */
+@media (max-width: 1200px) {
+  header .navbar-container .navbar-items {
+    gap: 1.2rem;
+  }
+  header .navbar-container .navbar-items li a {
+    font-size: 0.95rem;
+    padding: 0.28rem 0.7rem;
+  }
 }
 @media (max-width: 992px) {
-  .header .titulo1 {
-    font-size: 1.5rem;
-    margin-top: 0.8rem;
+  /* mantener navbar horizontal: solo reducir gap y fuente */
+  header .navbar-container .navbar-items {
+    gap: 1rem;
+  }
+  header .navbar-container .navbar-items li a {
+    font-size: 0.9rem;
+    padding: 0.24rem 0.6rem;
+  }
+  /* asegurate de NO tener flex-direction: column ni width:100% aquí */
+  .separado {
+    margin-top: -25px !important;
+  }
+}
+@media (max-width: 768px) {
+  header .navbar-container .navbar-items {
+    gap: 0.8rem;
+  }
+  header .navbar-container .navbar-items li a {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
   }
 }
 @media (max-width: 576px) {
-  .header .titulo1 {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+  header .navbar-container .navbar-items {
+    gap: 0.5rem;
+  }
+  header .navbar-container .navbar-items li a {
+    font-size: 0.75rem;
+    padding: 0.18rem 0.45rem;
   }
 }
-.header .texto-cursiva {
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1rem;
-  color: #555;
-}
-.header .col-3.text-end a,
-.header .col-3.text-end .btn-user {
-  font-size: 1.5rem;
-  color: #333;
-  margin-left: 10px;
-  display: inline-block;
-  padding: 0;
-  border: none;
-  background: none;
-}
-.header .col-3.text-end a:hover,
-.header .col-3.text-end .btn-user:hover {
-  color: #007bff;
-}
-.header .btn-user i {
-  font-size: 1.5rem;
+/* limpiar márgenes fantasma */
+.header + .navbar-container {
+  margin-top: -1px !important;
 }
 
+.navbar-container ul {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media (max-width: 992px) {
+  header {
+    padding-top: 0px !important;
+  }
+}
+@media (max-width: 576px) {
+  header {
+    padding-top: 0px !important;
+  }
+}
+@media (max-width: 1440px) {
+  .header + .navbar-container {
+    padding: 2px;
+    margin-top: -5px !important;
+  }
+}
+@media (max-width: 1024px) {
+  header + .navbar-container {
+    margin-top: -7px !important;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 10px; /* aumenta espacio en mobile */
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header + .navbar-container {
+    margin-top: -20px !important;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    padding-top: 0px; /* suficiente para evitar que el contenido quede tapado */
+  }
+  .header + .navbar-container {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 375px) {
+  .header + .navbar-container {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 425px) {
+  .header + .navbar-container {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 320px) {
+  .header + .navbar-container {
+    margin-top: 0 !important;
+  }
+}
 .footer {
   background-color: #111;
   color: #f8f9fa;
@@ -212,7 +242,7 @@
 }
 
 .seccion-catalogos {
-  background-color: #f8f9fa;
+  background-color: #f5f5f5;
   padding: 3rem 1rem;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -236,6 +266,159 @@
   width: 80px;
   height: 3px;
   background-color: #000;
+}
+
+.colecciones {
+  margin-top: 8px;
+}
+
+.colecciones {
+  background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.colecciones .titulo-seccion {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.colecciones .coleccion-card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.colecciones .coleccion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.colecciones .coleccion-card .video-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.colecciones .coleccion-card .video-thumb img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.colecciones .coleccion-card .video-thumb .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+.colecciones .coleccion-card .video-thumb:hover img {
+  transform: scale(1.05);
+}
+.colecciones .coleccion-card .video-thumb:hover .play-icon {
+  opacity: 1;
+}
+.colecciones .coleccion-card .card-body {
+  background: #fff;
+  padding: 1rem;
+}
+.colecciones .coleccion-card.spring {
+  border-top: 5px solid #82c91e;
+}
+.colecciones .coleccion-card.summer {
+  border-top: 5px solid #ff922b;
+}
+.colecciones .coleccion-card.autumn {
+  border-top: 5px solid #cc8b65;
+}
+.colecciones .coleccion-card.winter {
+  border-top: 5px solid #4dabf7;
+}
+.colecciones .coleccion-card h5 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.colecciones .coleccion-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/*Contacto*/
+.contacto {
+  background: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+}
+.contacto .titulo-seccion {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.contacto .titulo-contacto {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.contacto .descripcion-contacto {
+  font-family: "Poppins", sans-serif;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.contacto .sombra-img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.contacto .sombra-img:hover {
+  transform: scale(1.03);
+}
+.contacto .mapa-container iframe {
+  border: none;
+  border-radius: 10px;
+}
+@media (max-width: 992px) {
+  .contacto {
+    text-align: center;
+  }
+  .contacto .mapa-container {
+    margin-top: 1rem;
+  }
+}
+
+/*perfumes*/
+.perfume {
+  background: url("../assets/fondos/la-estructura-detallada-de-marmol-en-patron-natural-para-el-fondo-y-el-diseno.jpg");
+  background-size: contain;
+}
+
+.ropa {
+  background: url("../assets/fondos/5591317.jpg");
+}
+
+.equipo {
+  padding: 10px;
+}
+
+.calzado {
+  background: url("../assets/imagenes/fondo-de-pared-abstracto-pintado-mano.jpg");
+  background-size: contain;
+}
+
+.contenido-principal {
+  margin-top: 150px;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contenido-principal {
+    margin-top: 170px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

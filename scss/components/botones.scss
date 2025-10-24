@@ -13,7 +13,7 @@
   @include mixins.transition(all);
 
   &:hover {
-    background-color: darken(vars.$color-primario, 15%);
+    
     transform: translateY(-3px);
   }
 }
